@@ -60,7 +60,7 @@ jobs:
       - name: Check selected record and review evidence
         run: |
           python -B scripts/verify_selected_result.py
-          python -B scripts/verify_pr_reconciliation.py
+          python -B scripts/replay_historical_check.py tooling-ledger
       - name: Cold finite replay and exact composition binding
         env:
           CXX: g++
